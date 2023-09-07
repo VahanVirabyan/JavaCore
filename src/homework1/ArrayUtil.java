@@ -14,6 +14,8 @@ public class ArrayUtil {
 
 
         System.out.println("\"Number 3\")");
+        for (int i = 0; i < numbers.length - 1; i++) {
+        }
         System.out.println(numbers[8]);
 
 
@@ -22,36 +24,63 @@ public class ArrayUtil {
 
 
         System.out.println("\"Number 5\")");
-        int min_num = numbers[0];
-        for (int i = 0; i < numbers.length; i++) {
-            if (min_num > numbers[i]) {
-                min_num = numbers[i];
+        int min = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (min > numbers[i]) {
+                min = numbers[i];
             }
         }
-        System.out.println(min_num);
+        System.out.println(min);
+
+        System.out.println("\"Number 6\")");
+        if (numbers.length > 2) {
+            if (numbers.length % 2 == 0) {
+                System.out.println(+numbers[numbers.length / 2 - 1] + " " + numbers[numbers.length / 2]);
+
+            } else {
+                System.out.println(+numbers[numbers.length / 2]);
+
+            }
+        } else {
+            System.out.println("Can't print middle value");
+        }
+
+        System.out.println("\"Number 7\")");
+        int evenCount = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                evenCount++;
+            }
+        }
+        System.out.println(evenCount);
 
 
         System.out.println("\"Number 8\")");
-        int kent = 0;
+        int oddCount = 0;
         for (int i = 0; i < numbers.length; i++) {
-           if(numbers[i]%2!=0){
-               kent++;
-           }
+            if (numbers[i] % 2 != 0) {
+                oddCount++;
+            }
         }
-        System.out.println(kent);
+        System.out.println(oddCount);
 
 
         System.out.println("\"Number 9\")");
-        int summa = 0;
+        int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
-            summa = numbers[i] + summa;
+            sum = sum + numbers[i];
         }
-        System.out.println(summa);
+        System.out.println(sum);
+
 
         System.out.println("\"Number 10\")");
-        int result = 0;
-        for (int i = 0; i < numbers.length; i++)
-            result = result + numbers[i];
-        System.out.println(result / 9);
+        int avg = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            avg += numbers[i];
+        }
+        System.out.println(avg / numbers.length);
+
     }
 }
+
+
