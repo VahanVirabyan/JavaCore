@@ -17,11 +17,15 @@ public class DynamicArrayDemo {
         myArray.push(10);
         myArray.print();
         System.out.println();
+
         System.out.println(myArray.getByIndex(5));
         myArray.deleteByIndex(4);
+
         System.out.println();
+
         myArray.set(4,50);
         System.out.println();
+
         myArray.add(4,50);
         System.out.println();
 
