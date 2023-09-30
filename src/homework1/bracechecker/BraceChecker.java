@@ -24,12 +24,11 @@ public class BraceChecker {
                     } else {
                         int pop = stack.pop();
                         if (pop != '(' && text.charAt(i) == ')' || pop != '[' && text.charAt(i) == ']' || pop != '{' && text.charAt(i) == '}') {
-                            System.err.println("error: opened " + (char) pop + " but closed " + text.charAt(i));
+                            System.err.println("error: opened " + (char) pop + " but closed " + text.charAt(i) + " " + i);
                         }
                     }
             }
         }
-
         int size = stack.getSize();
         for (int j = 0; j <= size; j++) {
             System.err.println("error: " + " opened " + (char) stack.pop() + " but don't closed");
