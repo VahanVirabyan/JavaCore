@@ -21,7 +21,7 @@ public class ScannerExample {
 
 
 //        System.out.println("Please imput full name");
-//        String fullName = scanner.nextLine();
+//        String fullName = scanner.nextLine()
 //        String[] fullNameArray = fullName.split(" ");
 //        System.out.println(fullNameArray[0]);
 //        System.out.println(fullNameArray[1]);

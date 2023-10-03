@@ -28,7 +28,7 @@ public class BookStorage {
             }
         }
     }
-
+//
     private void extend() {
         Book[] temp = new Book[books.length + 10];
         System.arraycopy(books, 0, temp, 0, books.length);
