@@ -13,21 +13,21 @@ public class EmployeeStorage {
 
     public void print() {
         for (int i = 0; i < size; i++) {
-            System.out.println(emp[i].getName() + " " + emp[i].getSurname() + " " + emp[i].getEmployeeID() + " " + emp[i].getSalary() + " " + emp[i].getCompany() + " " + emp[i].getPosition());
+            System.out.println(emp[i]);
         }
     }
 
     public void searchEmployeeID(String keyword) {
         for (int i = 0; i < size; i++) {
             if (emp[i].getEmployeeID().equals(keyword)) {
-                System.out.println(emp[i].getName() + " " + emp[i].getSurname() + " " + emp[i].getEmployeeID() + " " + emp[i].getSalary() + " " + emp[i].getCompany() + " " + emp[i].getPosition());
+                System.out.println(emp[i]);
             }
         }
     }
     public void searchCompanyName(String keyword) {
         for (int i = 0; i < size; i++) {
             if (emp[i].getCompany().contains(keyword)) {
-                System.out.println(emp[i].getName() + " " + emp[i].getSurname() + " " + emp[i].getEmployeeID() + " " + emp[i].getSalary() + " " + emp[i].getCompany() + " " + emp[i].getPosition());
+                System.out.println(emp[i]);
             }
         }
     }

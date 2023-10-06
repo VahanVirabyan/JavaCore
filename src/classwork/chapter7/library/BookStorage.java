@@ -14,7 +14,7 @@ public class BookStorage {
 
     public void print() {
         for (int i = 0; i < size; i++) {
-            System.out.println(books[i].getTitle() + " " + books[i].getAuthorName() + " " + books[i].getPrice() + " " + books[i].getCount());
+            System.out.println(books[i]);
 
         }
     }
@@ -28,7 +28,6 @@ public class BookStorage {
             }
         }
     }
-//
     private void extend() {
         Book[] temp = new Book[books.length + 10];
         System.arraycopy(books, 0, temp, 0, books.length);

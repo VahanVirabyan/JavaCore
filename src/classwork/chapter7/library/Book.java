@@ -1,6 +1,7 @@
 package classwork.chapter7.library;
-//
+
 public class Book {
+
     private String title;
     private String authorName;
     private double price;
@@ -17,22 +18,27 @@ public class Book {
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
     public String getAuthorName() {
+
         return authorName;
     }
 
     public void setAuthorName(String authorName) {
+
         this.authorName = authorName;
     }
 
     public double getPrice() {
+
         return price;
     }
 
@@ -46,5 +52,15 @@ public class Book {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", price=" + price +
+                ", count=" + count +
+                '}';
     }
 }
