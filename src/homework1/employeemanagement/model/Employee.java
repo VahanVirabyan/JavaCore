@@ -1,23 +1,34 @@
-package homework1.employee;
+package homework1.employeemanagement.model;
 
 public class Employee {
+
+    private String id;
     private String name;
     private String surname;
-    private String employeeID;
+    private String phone;
     private double salary;
-    private String company;
     private String position;
+    private Company company;
 
-    public Employee(String name, String surname, String employeeID, double salary, String company, String position) {
+    public Employee(String id, String name, String surname, String phone, double salary, String position, Company company) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
-        this.employeeID = employeeID;
+        this.phone = phone;
         this.salary = salary;
-        this.company = company;
         this.position = position;
+        this.company = company;
     }
 
     public Employee() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -36,12 +47,12 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getEmployeeID() {
-        return employeeID;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setEmployeeID(String employeeID) {
-        this.employeeID = employeeID;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public double getSalary() {
@@ -52,14 +63,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
     public String getPosition() {
         return position;
     }
@@ -68,15 +71,24 @@ public class Employee {
         this.position = position;
     }
 
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", employeeID='" + employeeID + '\'' +
+                ", phone='" + phone + '\'' +
                 ", salary=" + salary +
-                ", company='" + company + '\'' +
                 ", position='" + position + '\'' +
+                ", company='" + company + '\'' +
                 '}';
     }
 }
