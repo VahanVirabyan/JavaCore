@@ -58,7 +58,7 @@ public class LibraryMain {
         System.out.println("Book created!");
     }
 
-    private static void printCommands() {
+    public static void printCommands() {
         System.out.println("Please input 0 for EXIT");
         System.out.println("Please input 1 ADD BOOK");
         System.out.println("Please input 2 SEARCH BOOK");
