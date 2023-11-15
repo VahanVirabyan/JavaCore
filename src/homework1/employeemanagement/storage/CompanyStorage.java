@@ -1,8 +1,11 @@
 package homework1.employeemanagement.storage;
 
 import homework1.employeemanagement.model.Company;
+import homework1.employeemanagement.util.StorageSerializeUtil;
 
-public class CompanyStorage {
+import java.io.Serializable;
+
+public class CompanyStorage implements Serializable {
 
     private Company[] compamies = new Company[10];
     private int size;
@@ -12,6 +15,7 @@ public class CompanyStorage {
             extend();
         }
         compamies[size++] = compamy;
+        StorageSerializeUtil.serializeCompanyStorage(this);
     }
 
     public void print() {
@@ -46,6 +50,7 @@ public class CompanyStorage {
             compamies[i - 1] = compamies[i];
         }
         size--;
+        StorageSerializeUtil.serializeCompanyStorage(this);
     }
 
     private int getIndexById(String companyId) {

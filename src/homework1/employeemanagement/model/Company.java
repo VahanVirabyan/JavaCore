@@ -1,8 +1,9 @@
 package homework1.employeemanagement.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Company {
+public class Company implements Serializable {
 
     private String id;
     private String name;
@@ -46,11 +47,11 @@ public class Company {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Company compamy = (Company) o;
+        Company company = (Company) o;
 
-        if (!Objects.equals(id, compamy.id)) return false;
-        if (!Objects.equals(name, compamy.name)) return false;
-        return Objects.equals(adress, compamy.adress);
+        if (!Objects.equals(id, company.id)) return false;
+        if (!Objects.equals(name, company.name)) return false;
+        return Objects.equals(adress, company.adress);
     }
 
     @Override
@@ -63,7 +64,7 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Compamy{" +
+        return "Company{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", adress='" + adress + '\'' +

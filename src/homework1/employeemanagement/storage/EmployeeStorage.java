@@ -1,9 +1,13 @@
 package homework1.employeemanagement.storage;
 
+import homework1.employeemanagement.exception.EmployeeNotFoundException;
 import homework1.employeemanagement.model.Company;
 import homework1.employeemanagement.model.Employee;
+import homework1.employeemanagement.util.StorageSerializeUtil;
 
-public class EmployeeStorage {
+import java.io.Serializable;
+
+public class EmployeeStorage implements Serializable {
 
     private Employee[] employees = new Employee[10];
     private int size;
@@ -13,6 +17,7 @@ public class EmployeeStorage {
             extend();
         }
         employees[size++] = employee;
+        StorageSerializeUtil.serializeEmployeeStorage(this);
     }
 
     public void print() {
@@ -27,13 +32,13 @@ public class EmployeeStorage {
         employees = tmp;
     }
 
-    public Employee getById(String employeeId) {
+    public Employee getById(String employeeId) throws EmployeeNotFoundException {
         for (int i = 0; i < size; i++) {
             if (employees[i].getId().equals(employeeId)) {
                 return employees[i];
             }
         }
-        return null;
+        throw new EmployeeNotFoundException("Employee with " + employeeId + " does not exists!");
     }
 
     public void searchEmployeeByCompany(Company companyFromStorage) {
@@ -50,10 +55,11 @@ public class EmployeeStorage {
             System.out.println("Employee does not exists!");
             return;
         }
-        for (int i = 0; i < size; i++) {
+        for (int i = indexById + 1; i < size; i++) {
             employees[i - 1] = employees[i];
         }
         size--;
+        StorageSerializeUtil.serializeEmployeeStorage(this);
     }
 
     private int getIndexById(String companyId) {
