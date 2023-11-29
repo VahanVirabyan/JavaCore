@@ -1,4 +1,4 @@
-package homework1;
+package homework1.util;
 
 public class ArrayUtil {
     public static void main(String[] args) {
