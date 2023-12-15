@@ -5,7 +5,6 @@ import homework1.onlineStore.model.User;
 import homework1.onlineStore.util.StorageSerializeUtil;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
